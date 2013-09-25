@@ -8,5 +8,6 @@ It's recommended that you limit the scope of the plugin to the specific theme lo
 Customization Filters
 -------------
 
-`dropdown_menu_class_menus` - An array of theme locations. If empty (default), the plugin will run on all menus.
-`dropdown_menu_class_args` - Menu query args. Useful if you want to change the conditions under which an item gets the class (ie: only top level menu items with submenus).
+`dropdown_menu_class_menus`
+An array of theme locations. If empty (default), the plugin will run on all menus.
+Example: https://gist.github.com/billerickson/6700212
