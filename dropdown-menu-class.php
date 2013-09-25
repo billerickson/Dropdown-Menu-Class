@@ -51,7 +51,7 @@ function be_dropdown_menu_class( $classes, $item, $args ) {
 			)
 		)
 	);
-	$children = new WP_Query( apply_filters( 'dropdown_menu_class_args', $children_args ) );
+	$children = new WP_Query( $children_args );
 	if( !empty( $children->posts ) )
 		$classes[] = 'has-submenu';
 
