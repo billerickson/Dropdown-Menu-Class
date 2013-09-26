@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Dropdown Menu Class
  * Plugin URI:  https://github.com/billerickson/Dropdown-Menu-Class
- * Description: Adds a CSS class of 'has-submenu' to menu items with submenus. No Javascript Required.
+ * Description: Adds a CSS class of 'menu-item-has-children' to menu items with submenus. No Javascript Required.
  * Version:     1.0.0
  * Author:      Bill Erickson
  * Author URI:  http://www.billerickson.net
@@ -53,7 +53,7 @@ function be_dropdown_menu_class( $classes, $item, $args ) {
 	);
 	$children = new WP_Query( $children_args );
 	if( !empty( $children->posts ) )
-		$classes[] = 'has-submenu';
+		$classes[] = 'menu-item-has-children';
 
 	return $classes;
 }
