@@ -36,6 +36,11 @@
  */
 function be_dropdown_menu_class( $classes, $item, $args ) {
 
+	// Added to core in 3.7
+	// See: http://core.trac.wordpress.org/changeset/25602
+	if( version_compare( get_bloginfo( 'version' ), '3.7', '>=' ) )
+		return $classes;
+
 	// Allow devs to limit to specific menu
 	$allowed_menus = apply_filters( 'dropdown_menu_class_menus', array() );
 	if( !empty( $allowed_menus ) && !in_array( $args->theme_location, $allowed_menus ) )
