@@ -44,7 +44,7 @@ function be_dropdown_menu_class( $items, $args ) {
 	// Allow devs to limit to specific menu
 	$allowed_menus = apply_filters( 'dropdown_menu_class_menus', array() );
 	if( !empty( $allowed_menus ) && !in_array( $args->theme_location, $allowed_menus ) )
-		return $classes;
+		return $items;
 
 	$parents = array();
 	foreach ( $items as $item ) {
